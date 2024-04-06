@@ -30,7 +30,7 @@ class Car:
 
         # Clip throttle and steering angle to reasonable values
         throttle = min(max(throttle, -1), 1)
-        steering_angle = max(min(steering_angle, 0.4), -0.4)
+        steering_angle = max(min(steering_angle, 0.6), -0.6)
 
         # Set the steering joint positions
         self.client.setJointMotorControlArray(self.car, self.steering_joints,

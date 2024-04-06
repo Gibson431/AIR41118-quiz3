@@ -1,0 +1,7 @@
+pip
+setuptools
+torch
+matplotlib
+pybullet
+gym
+numpy
