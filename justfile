@@ -1,7 +1,8 @@
-run:
-	python -m venv .venv
-	. ./.venv/bin/activate
-	pip install -U -r requirements.txt
-	./.venv/bin/python setup.py install
-	./.venv/bin/python ./assignment3.py
-	deactivate
+train:
+	bash ./run.bash train
+
+retrain:
+	bash ./run.bash retrain
+
+test:
+	bash ./run.bash test
