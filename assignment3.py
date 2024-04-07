@@ -58,6 +58,8 @@ def q_learning(
     epsilon = epsilon_start
 
     for episode in range(episodes):
+        if episode % 1000 == 0:
+            agent.save_model("agent-bak.pkl")
         state = env.reset()
         total_reward = 0
         for t in range(max_episode_length):
@@ -106,7 +108,7 @@ def q_learning(
             target_agent.load_state_dict(agent.state_dict())
             print(f"Episode {episode}, Total Reward: {total_reward}")
 
-    return target_agent
+    return agent
 
 
 def main():
@@ -150,7 +152,7 @@ def main():
             agent = DeepQAgent(2, env.action_space.n)
 
             episodes = 10000
-            max_episode_length = 50
+            max_episode_length = max_episode_length
             gamma = 0.95
             epsilon_start = 1.0
             epsilon_end = 0.05

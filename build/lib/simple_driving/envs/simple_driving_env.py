@@ -86,12 +86,12 @@ class SimpleDrivingEnv(gym.Env):
         delta_dist = self.prev_dist_to_goal - dist_to_goal
         self.prev_dist_to_goal = dist_to_goal
 
-        reward -= 1 if delta_dist <= 0 else 0
+        reward -= 0.5 if delta_dist <= 0 else 0
 
         car_tvel, _ = self._p.getBaseVelocity(self.car.car)
         absvel = math.sqrt((car_tvel[0] ** 2 + car_tvel[1] ** 2 + car_tvel[2] ** 2))
 
-        reward -= 1 if absvel < 0.01 else 0
+        reward -= 1 if absvel < 0.05 else 0
 
         # Done by reaching goal
         if dist_to_goal < 1.5 and not self.reached_goal:
