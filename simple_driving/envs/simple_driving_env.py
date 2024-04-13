@@ -33,7 +33,7 @@ class SimpleDrivingEnv(gym.Env):
         if renders:
             self._p = bc.BulletClient(connection_mode=p.GUI)
         else:
-            self._p = bc.BulletClient(connection_mode=p.DIRECT)
+            self._p = bc.BulletClient()
 
         self.reached_goal = False
         self._timeStep = 0.01
