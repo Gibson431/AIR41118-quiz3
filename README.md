@@ -1,8 +1,12 @@
-Modifications:
-* Added third-person and on-board camera rendering modes.
-* Made runnable on google colab notebook
+# Quiz 3 #
 
-# Gym-Medium-Post
-Basic OpenAI gym environment. 
+The training was done in `Assignment3.ipynb`
 
-Resource for the [Medium series on creating OpenAI Gym Environments with PyBullet](https://medium.com/@gerardmaggiolino/creating-openai-gym-environments-with-pybullet-part-1-13895a622b24). 
+The trained network can be tested in `main.py` and uses the policy saved in `policies.bak/`
+
+The `assignment.py` file is just an importer for the test file because I couldn't import the notebook classes
+
+
+## Running ##
+
+Either with the notebook or through venv. The `run.bash` script 
