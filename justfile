@@ -1,8 +1,8 @@
 train:
-	bash ./run.bash train
+	echo "Training has been removed. Use the notebook instead."
 
 retrain:
-	bash ./run.bash retrain
+	echo "Retraining has been removed. Use the notebook instead."
 
 test:
-	bash ./run.bash test
+	bash ./run.bash
