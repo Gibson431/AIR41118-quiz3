@@ -9,4 +9,4 @@ The `assignment.py` file is just an importer for the test file because I couldn'
 
 ## Running ##
 
-Either with the notebook or through venv. The `run.bash` script 
+Either with the notebook or through venv. The `run.bash` script auto creates and sets up the venv, then runs the test script.
